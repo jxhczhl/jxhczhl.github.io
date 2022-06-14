@@ -20,23 +20,33 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="黑脸怪">
-<meta property="og:url" content="http://example.com/index.html">
+    <meta name="description" content="在线解析网址：https:&#x2F;&#x2F;astexplorer.net&#x2F;  树结构1234567891011121314151617181920Node &amp;#123;  type: &amp;#x27;File&amp;#x27;,  program: Node &amp;#123;    type: &amp;#x27;Program&amp;#x27;,    start: 0,    end: 7,    loc: SourceLocati">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ast数美学习笔记">
+<meta property="og:url" content="http://example.com/2022/06/14/ast%E6%95%B0%E7%BE%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="黑脸怪">
+<meta property="og:description" content="在线解析网址：https:&#x2F;&#x2F;astexplorer.net&#x2F;  树结构1234567891011121314151617181920Node &amp;#123;  type: &amp;#x27;File&amp;#x27;,  program: Node &amp;#123;    type: &amp;#x27;Program&amp;#x27;,    start: 0,    end: 7,    loc: SourceLocati">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1971278/1651476584092-b47fb55a-ffd7-4d1d-8118-d28787d36cf4.png#clientId=u72789793-91f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=494&id=u493904a3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=592&originWidth=771&originalType=binary&ratio=1&rotation=0&showTitle=false&size=22823&status=done&style=none&taskId=u4a57a259-a3cb-4d2d-8f09-6381f13ee94&title=&width=643">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1971278/1653276903627-bb385b9d-3bc1-4c95-9b34-e15f2f9d082e.png#clientId=ub3e6ea67-75c7-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=504&id=ue906e18b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=504&originWidth=1088&originalType=binary&ratio=1&rotation=0&showTitle=false&size=18357&status=done&style=none&taskId=u4ab1de4d-75dd-4f6e-aac3-d1849cd3cbe&title=&width=1088">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1971278/1655191622616-410b6b40-f0d9-4340-8f6a-2c1b6d6a62aa.png#clientId=u5f83ecc7-ad97-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=818&id=ua96c33c5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=818&originWidth=592&originalType=binary&ratio=1&rotation=0&showTitle=false&size=91364&status=done&style=none&taskId=u45dd8d7a-b06b-4de5-a50c-6a4f5b67d8f&title=&width=592">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1971278/1655198954467-b7e76c46-4836-4caa-99ca-7ab15cc0f44b.png#clientId=u5f83ecc7-ad97-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=595&id=u5f06277f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=775&originWidth=669&originalType=binary&ratio=1&rotation=0&showTitle=false&size=96302&status=done&style=none&taskId=uddb6cfa0-08d3-4de2-aef1-d7adaf6b45d&title=&width=514">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/1971278/1655200168428-7c9ada9d-f816-4d7d-bc9f-5d18fadf2abd.png#clientId=u5f83ecc7-ad97-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=218&id=u54a6d8f5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=218&originWidth=1119&originalType=binary&ratio=1&rotation=0&showTitle=false&size=26765&status=done&style=none&taskId=u890039d3-2115-42dc-b82a-cacc77518d1&title=&width=1119">
+<meta property="article:published_time" content="2022-06-14T13:55:52.000Z">
+<meta property="article:modified_time" content="2022-06-14T13:57:22.471Z">
 <meta property="article:author" content="hliang">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/1971278/1651476584092-b47fb55a-ffd7-4d1d-8118-d28787d36cf4.png#clientId=u72789793-91f3-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=494&id=u493904a3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=592&originWidth=771&originalType=binary&ratio=1&rotation=0&showTitle=false&size=22823&status=done&style=none&taskId=u4a57a259-a3cb-4d2d-8f09-6381f13ee94&title=&width=643">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/06/14/ast%E6%95%B0%E7%BE%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/06/14/ast%E6%95%B0%E7%BE%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"2022/06/14/ast数美学习笔记/","title":"ast数美学习笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>黑脸怪</title>
+<title>ast数美学习笔记 | 黑脸怪</title>
   
 
 
@@ -66,7 +76,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">黑脸怪</h1>
+      <p class="site-title">黑脸怪</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -102,7 +112,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -115,6 +125,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">树结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D-%E4%B8%8D%E7%94%A8%E8%AE%B0%EF%BC%8C%E7%94%A8%E7%BD%91%E7%AB%99%E8%A7%A3%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">节点类型介绍(不用记，用网站解析)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#node-js-%E9%87%8C%E7%9A%84ast%E5%BA%93-%E5%9B%9B%E5%B0%8F%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">node.js 里的ast库-四小工具介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#parse-js%E8%BD%ACast%E6%A0%91"><span class="nav-number">4.</span> <span class="nav-text">parse js转ast树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#generator-%E8%BD%ACjs"><span class="nav-number">5.</span> <span class="nav-text">generator 转js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#traverse-%E9%81%8D%E5%8E%86"><span class="nav-number">6.</span> <span class="nav-text">traverse 遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#types"><span class="nav-number">7.</span> <span class="nav-text">types</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%9D%82%E8%AE%B0"><span class="nav-number">8.</span> <span class="nav-text">其他杂记</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#path-scope%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">9.</span> <span class="nav-text">path.scope作用域</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%98%E5%8E%9F%E5%B0%8F%E5%B0%8F%E5%B0%8F%E6%A1%88%E4%BE%8B"><span class="nav-number"></span> <span class="nav-text">还原小小小案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%EF%BC%9A%E7%BB%8F%E5%85%B8%E7%9A%8416%E8%BF%9B%E5%88%B6%E5%92%8CUnicode%E8%BF%98%E5%8E%9F"><span class="nav-number">1.</span> <span class="nav-text">1：经典的16进制和Unicode还原</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0"><span class="nav-number">2.</span> <span class="nav-text">2：字符串相加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%EF%BC%9A%E7%BE%8E%E5%8C%96%E5%AF%B9%E8%B1%A1%E8%B0%83%E7%94%A8%E7%9A%84%E4%B8%AD%E6%8B%AC%E5%8F%B7%E4%B8%BA%E2%80%9D%E7%82%B9%E2%80%9D"><span class="nav-number">3.</span> <span class="nav-text">3：美化对象调用的中括号为”点”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%EF%BC%9A%E5%87%8F%E5%B0%91%E4%B8%AD%E9%97%B4%E5%95%86-%E5%88%A0%E9%99%A4%E6%B2%A1%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F%E5%92%8C%E5%A4%9A%E4%BD%99%E7%9A%84%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F"><span class="nav-number">4.</span> <span class="nav-text">4：减少中间商-删除没使用的变量和多余的传递变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%98%E5%8E%9F%E5%B0%8F%E6%A1%88%E4%BE%8B%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">还原小案例：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BE%8E%E6%BB%91%E5%9D%97%E5%92%8C%E5%8A%A8%E6%80%81post%E5%8F%82%E6%95%B0-key"><span class="nav-number">1.</span> <span class="nav-text">数美滑块和动态post参数,key</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -166,16 +177,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/14/ast%E6%95%B0%E7%BE%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -189,13 +201,13 @@
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 黑脸怪">
+      <meta itemprop="name" content="ast数美学习笔记 | 黑脸怪">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/06/14/ast%E6%95%B0%E7%BE%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">ast数美学习笔记</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          ast数美学习笔记
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -219,7 +231,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在线解析网址：<a target="_blank" rel="noopener" href="https://astexplorer.net/">https://astexplorer.net/</a></p>
+        <p>在线解析网址：<a target="_blank" rel="noopener" href="https://astexplorer.net/">https://astexplorer.net/</a></p>
 <p><a name="bab6D"></a></p>
 <h4 id="树结构"><a href="#树结构" class="headerlink" title="树结构"></a>树结构</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Node</span> &#123;</span><br><span class="line">  <span class="attr">type</span>: <span class="string">&#x27;File&#x27;</span>,</span><br><span class="line">  <span class="attr">program</span>: <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;Program&#x27;</span>,</span><br><span class="line">    <span class="attr">start</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">end</span>: <span class="number">7</span>,</span><br><span class="line">    <span class="attr">loc</span>: <span class="title class_">SourceLocation</span> &#123;</span><br><span class="line">      <span class="attr">start</span>: [<span class="title class_">Position</span>],</span><br><span class="line">      <span class="attr">end</span>: [<span class="title class_">Position</span>],</span><br><span class="line">      <span class="attr">filename</span>: <span class="literal">undefined</span>,</span><br><span class="line">      <span class="attr">identifierName</span>: <span class="literal">undefined</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">sourceType</span>: <span class="string">&#x27;script&#x27;</span>,</span><br><span class="line">    <span class="attr">interpreter</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">body</span>: [ [<span class="title class_">Node</span>] ],</span><br><span class="line">    <span class="attr">directives</span>: []</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">comments</span>: [] <span class="comment">//注释</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>type:”File” 代表整个文件 <br />loc:    代表标识位 一般没用所以隐藏了<br />program：node节点 主要代码都在这<br />-body：node节点 把它当作html的body 所有可见的都在那<br />body下的xxx 比如VariableDeclaration： 这是节点类型啥的 后面介绍(后面遍历操作都是这些玩意)<br />commets：代码里的注释<br><a name="QFcrR"></a></p>
@@ -378,7 +390,6 @@
 <p>4.获取动态的数据</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取动态post参数和加密的key</span></span><br><span class="line"><span class="keyword">let</span> key_dict=[];</span><br><span class="line"><span class="keyword">let</span> visitor3=&#123;</span><br><span class="line">    <span class="string">&quot;AssignmentExpression&quot;</span>(path)&#123;</span><br><span class="line">        <span class="keyword">let</span> &#123;node&#125;=path;</span><br><span class="line">        <span class="keyword">let</span> &#123;left,right&#125;=node;</span><br><span class="line">        <span class="keyword">if</span>(!left.<span class="property">property</span>||left.<span class="property">property</span>.<span class="property">type</span>!==<span class="string">&quot;StringLiteral&quot;</span>)<span class="keyword">return</span></span><br><span class="line">        <span class="keyword">if</span>(!right||!right.<span class="property">arguments</span>||right.<span class="property">arguments</span>.<span class="property">length</span>!==<span class="number">2</span>)<span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span>(right.<span class="property">arguments</span>[<span class="number">1</span>].<span class="property">type</span>!==<span class="string">&quot;StringLiteral&quot;</span>||right.<span class="property">arguments</span>[<span class="number">1</span>].<span class="property">value</span>.<span class="property">length</span>!==<span class="number">8</span>)<span class="keyword">return</span>;</span><br><span class="line">        <span class="comment">// console.log(left.property.value,right.arguments[1].value)</span></span><br><span class="line">        key_dict.<span class="title function_">push</span>([left.<span class="property">property</span>.<span class="property">value</span>,right.<span class="property">arguments</span>[<span class="number">1</span>].<span class="property">value</span>])</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
@@ -386,316 +397,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/03/jsrpc-%E8%BF%9C%E7%A8%8B%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/" rel="prev" title="jsrpc-远程过程调用">
+                  <i class="fa fa-chevron-left"></i> jsrpc-远程过程调用
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/03/jsrpc-%E8%BF%9C%E7%A8%8B%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.jpg">
-      <meta itemprop="name" content="hliang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑脸怪">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 黑脸怪">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/03/jsrpc-%E8%BF%9C%E7%A8%8B%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8/" class="post-title-link" itemprop="url">jsrpc-远程过程调用</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-04-03 02:34:33 / 修改时间：02:38:33" itemprop="dateCreated datePublished" datetime="2022-04-03T02:34:33+08:00">2022-04-03</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="JsRPC"><a href="#JsRPC" class="headerlink" title="JsRPC"></a>JsRPC</h1><h5 id="黑脸怪-hliang"><a href="#黑脸怪-hliang" class="headerlink" title="黑脸怪-hliang"></a>黑脸怪-hliang</h5><p>– js逆向之远程调用(rpc)免去抠代码补环境</p>
-<blockquote>
-<p>tip:懒得自己编译的 ，<a target="_blank" rel="noopener" href="https://github.com/jxhczhl/JsRpc/releases">releases</a>中有已经编译好的包 （win和Linux的都有~）</p>
-</blockquote>
-<ul>
-<li><a href="#jsrpc">JsRPC</a><br>  - <a href="#%E9%BB%91%E8%84%B8%E6%80%AA-hliang">黑脸怪-hliang</a><ul>
-<li><a href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84">目录结构</a></li>
-<li><a href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D">基本介绍</a></li>
-<li><a href="#%E5%AE%9E%E7%8E%B0">实现</a></li>
-<li><a href="#%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95">食用方法</a><ul>
-<li><a href="#%E6%89%93%E5%BC%80%E7%BC%96%E8%AF%91%E5%A5%BD%E7%9A%84%E6%96%87%E4%BB%B6%E5%BC%80%E5%90%AF%E6%9C%8D%E5%8A%A1">打开编译好的文件，开启服务</a></li>
-<li><a href="#%E6%B3%A8%E5%85%A5js%E6%9E%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E7%8E%AF%E5%A2%83">注入JS，构建通信环境</a></li>
-<li><a href="#%E6%B3%A8%E5%85%A5ws%E4%B8%8E%E6%96%B9%E6%B3%95">注入ws与方法</a><ul>
-<li><a href="#%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A81%E6%97%A0%E5%8F%82%E8%8E%B7%E5%8F%96%E5%80%BC">远程调用1：无参获取值</a></li>
-<li><a href="#%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A82%E5%B8%A6%E5%8F%82%E8%8E%B7%E5%8F%96%E5%80%BC">远程调用2：带参获取值</a></li>
-<li><a href="#%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A83%E5%B8%A6%E5%A4%9A%E4%B8%AA%E5%8F%82%E8%8E%B7-%E5%B9%B6%E4%B8%94%E4%BD%BF%E7%94%A8post%E6%96%B9%E5%BC%8F-%E5%8F%96%E5%80%BC">远程调用3：带多个参获 并且使用post方式 取值</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E9%A3%9F%E7%94%A8%E6%A1%88%E4%BE%8B-%E7%88%B1%E9%94%AD%E7%BD%9115%E9%A2%98">食用案例-爱锭网15题</a></li>
-<li><a href="#todo">TODO</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- main.go (服务器的主代码)</span><br><span class="line">-- resouces/JsEnv.js (客户端注入js环境)</span><br></pre></td></tr></table></figure>
-
-<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>运行服务器程序和js脚本 即可让它们通信，实现调用接口执行js获取想要的值(加解密)</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>原理：在网站的控制台新建一个WebScoket客户端链接到服务器通信，调用服务器的接口 服务器会发送信息给客户端 客户端接收到要执行的方法执行完js代码后把获得想要的内容发回给服务器 服务器接收到后再显示出来</p>
-<blockquote>
-<p>说明：本方法可以https证书且支持wss</p>
-</blockquote>
-<p>在https的网站想要新建WebSocket连接如果是连接到普通的ws可能会报安全错误，好像连接本地(127.0.0.1)不会报错~ 可以用本地和wss 你自己看着玩</p>
-<ol>
-<li><p>无https证书者。直接编译main.go 我试了一下，发现使用本地ip(127.0.0.1)可以在https的网站直接连接ws使用 默认端口12080</p>
-</li>
-<li><p>有https证书者。修改main.go文件 把r.Run()注释掉，把r.RunTls注释取消掉 并且参数设置证书的路径 直接输入名字就是当前路径 默认端口：12443</p>
-</li>
-</ol>
-<blockquote>
-<p>另外的题外话，有域名没证书不会搞的 或者有域名有公网(非固定IP的)都可以搞成的，自己研究研究</p>
-</blockquote>
-<h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><h3 id="打开编译好的文件，开启服务"><a href="#打开编译好的文件，开启服务" class="headerlink" title="打开编译好的文件，开启服务"></a>打开编译好的文件，开启服务</h3><p>如下图所示<br><img src="https://user-images.githubusercontent.com/41224971/161306799-57f009dc-5448-402f-ab4d-ee5c6c969c91.png" alt="image"></p>
-<p><strong>api 简介</strong></p>
-<ul>
-<li><code>/list</code> :查看当前连接的ws服务</li>
-<li><code>/ws</code>  :浏览器注入ws连接的接口</li>
-<li><code>/go</code> :获取数据的接口  (可以get和post)</li>
-</ul>
-<p>说明：接口用?group和name来区分任务 如 ws:&#x2F;&#x2F;127.0.0.1:12080&#x2F;ws?group&#x3D;{}&amp;name&#x3D;{}” &#x2F;&#x2F;注入ws的例子 group和name都可以随便起名，必填选项<br><a target="_blank" rel="noopener" href="http://127.0.0.1:12080/go?group=%7B%7D&amp;name=%7B%7D&amp;action=%7B%7D&amp;param=%7B%7D">http://127.0.0.1:12080/go?group={}&amp;name={}&amp;action={}&amp;param={}</a> &#x2F;&#x2F;这是调用的接口<br>group和name填写上面注入时候的，action是注册的方法名,param是可选的参数 接口参数暂定为这几个，但是param还可以传stringify过的json(字符串) 下面会介绍</p>
-<h3 id="注入JS，构建通信环境"><a href="#注入JS，构建通信环境" class="headerlink" title="注入JS，构建通信环境"></a>注入JS，构建通信环境</h3><p>打开JsEnv 复制粘贴到网站控制台(注意有时要放开断点)</p>
-<p><img src="https://user-images.githubusercontent.com/41224971/161307187-1265ec7c-fe64-45d7-b255-5472e0f25802.png" alt="image"></p>
-<h3 id="注入ws与方法"><a href="#注入ws与方法" class="headerlink" title="注入ws与方法"></a>注入ws与方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注入环境后连接通信</span></span><br><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> <span class="title class_">Hlclient</span>(<span class="string">&quot;ws://127.0.0.1:12080/ws?group=zzz&amp;name=hlg&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<h5 id="远程调用1：无参获取值"><a href="#远程调用1：无参获取值" class="headerlink" title="远程调用1：无参获取值"></a>远程调用1：无参获取值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 注册一个方法 第一个参数hello为方法名，</span></span><br><span class="line"><span class="comment">// 第二个参数为函数，resolve里面的值是想要的值(发送到服务器的)</span></span><br><span class="line">demo.<span class="title function_">regAction</span>(<span class="string">&quot;hello&quot;</span>, <span class="keyword">function</span> (<span class="params">resolve</span>) &#123;</span><br><span class="line">    <span class="comment">//这样每次调用就会返回“好困啊+随机整数”</span></span><br><span class="line">    <span class="keyword">var</span> <span class="title class_">Js</span>_sjz = <span class="string">&quot;好困啊&quot;</span>+<span class="built_in">parseInt</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">1000</span>);</span><br><span class="line">    <span class="title function_">resolve</span>(<span class="title class_">Js</span>_sjz);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<pre><code>访问接口，获得js端的返回值
-http://localhost:12080/go?group=zzz&amp;name=hlg&amp;action=hello
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/41224971/161309382-81a9a9cc-65f7-4531-a1e6-a892dfe1facd.png" alt="image"></p>
-<h5 id="远程调用2：带参获取值"><a href="#远程调用2：带参获取值" class="headerlink" title="远程调用2：带参获取值"></a>远程调用2：带参获取值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//写一个传入字符串，返回base64值的接口(调用内置函数btoa)</span></span><br><span class="line">demo.<span class="title function_">regAction</span>(<span class="string">&quot;hello2&quot;</span>, <span class="keyword">function</span> (<span class="params">resolve,param</span>) &#123;</span><br><span class="line">    <span class="comment">//这样添加了一个param参数，http接口带上它，这里就能获得</span></span><br><span class="line">    <span class="keyword">var</span> base666 = <span class="title function_">btoa</span>(param)</span><br><span class="line">    <span class="title function_">resolve</span>(base666);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<pre><code>访问接口，获得js端的返回值
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/41224971/161311297-6731c089-3de2-44ed-80b9-21a03746a52c.png" alt="image"></p>
-<h5 id="远程调用3：带多个参获-并且使用post方式-取值"><a href="#远程调用3：带多个参获-并且使用post方式-取值" class="headerlink" title="远程调用3：带多个参获 并且使用post方式 取值"></a>远程调用3：带多个参获 并且使用post方式 取值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假设有一个函数 需要传递两个参数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">hlg</span>(<span class="params">User,Status</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">User</span>+<span class="string">&quot;说：&quot;</span>+<span class="title class_">Status</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">demo.<span class="title function_">regAction</span>(<span class="string">&quot;hello3&quot;</span>, <span class="keyword">function</span> (<span class="params">resolve,param</span>) &#123;</span><br><span class="line">    <span class="comment">//这里还是param参数 param里面的key 是先这里写，但到时候传接口就必须对应的上</span></span><br><span class="line">    res=<span class="title function_">hlg</span>(param[<span class="string">&quot;user&quot;</span>],param[<span class="string">&quot;status&quot;</span>])</span><br><span class="line">    <span class="title function_">resolve</span>(res);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>   访问接口，获得js端的返回值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">&quot;http://localhost:12080/go&quot;</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&quot;group&quot;</span>: <span class="string">&quot;zzz&quot;</span>,</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;hlg&quot;</span>,</span><br><span class="line">    <span class="string">&quot;action&quot;</span>: <span class="string">&quot;hello3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;param&quot;</span>: json.dumps(&#123;<span class="string">&quot;user&quot;</span>:<span class="string">&quot;黑脸怪&quot;</span>,<span class="string">&quot;status&quot;</span>:<span class="string">&quot;好困啊&quot;</span>&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&quot;param&quot;</span>]) <span class="comment">#dumps后就是长这样的字符串&#123;&quot;user&quot;: &quot;\u9ed1\u8138\u602a&quot;, &quot;status&quot;: &quot;\u597d\u56f0\u554a&quot;&#125;</span></span><br><span class="line">res=requests.post(url, data=data) <span class="comment">#这里换get也是可以的</span></span><br><span class="line"><span class="built_in">print</span>(res.text)</span><br></pre></td></tr></table></figure>
-<p><img src="https://user-images.githubusercontent.com/41224971/161313397-166cbda0-fe8b-4063-b815-376902d82f74.png" alt="image"></p>
-<h2 id="食用案例-爱锭网15题"><a href="#食用案例-爱锭网15题" class="headerlink" title="食用案例-爱锭网15题"></a>食用案例-爱锭网15题</h2><pre><code>本题解是把它ajax获取数据那一个函数都复制下来，然后控制台调用这样子~
-
-
-1.f12查看请求，跟进去 找到ajax那块，可以看到call函数就是主要的ajax发包 输入页数就可以，那我们复制这个函数里面的代码备用
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/41224971/134793093-bac742e9-2f66-4fe4-b98b-7769d7379350.png" alt="image"></p>
-<pre><code>2.先在控制台粘贴我的js环境，再注入一个rpc链接 注册一个call方法，名字自定义 第二个参数粘贴上面call的代码，小小修改一下
-   先定义num=param 这样就传参进来了，再定义一个变量来保存获取到的数据，resolve(变量) 就是发送。完了就注入好了，可以把f12关掉了
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/41224971/134795740-c62fce0d-7271-4b34-a9e5-07515b99ab81.png" alt="image"></p>
-<pre><code>3.调用接口就完事了，param就是传参页数 
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/41224971/134799668-3dd385e7-f44c-4fb3-85ff-00d78c674865.png" alt="image"></p>
-<pre><code>控制台可以关，但是注入的网页不要关哦
-</code></pre>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li><input disabled="" type="checkbox"> ssl Docker Deploy</li>
-<li><input disabled="" type="checkbox"> K8s Deploy</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/21/webpack%E9%80%9A%E7%94%A8%E5%8D%95%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.jpg">
-      <meta itemprop="name" content="hliang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑脸怪">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 黑脸怪">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/21/webpack%E9%80%9A%E7%94%A8%E5%8D%95%E5%B1%82%E5%8A%A0%E8%BD%BD%E5%99%A8/" class="post-title-link" itemprop="url">webpack通用单层加载器</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-03-21 13:34:24 / 修改时间：13:37:45" itemprop="dateCreated datePublished" datetime="2022-03-21T13:34:24+08:00">2022-03-21</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>=<span class="variable language_">global</span>;</span><br><span class="line">!(<span class="keyword">function</span> (<span class="params">e</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> i = &#123;&#125;</span><br><span class="line">        , o = &#123;</span><br><span class="line">        <span class="attr">index</span>: <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">c</span>(<span class="params">t</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i[t])</span><br><span class="line">            <span class="keyword">return</span> i[t].<span class="property">exports</span>;</span><br><span class="line">        <span class="keyword">var</span> n = i[t] = &#123;</span><br><span class="line">            <span class="attr">i</span>: t,</span><br><span class="line">            <span class="attr">l</span>: !<span class="number">1</span>,</span><br><span class="line">            <span class="attr">exports</span>: &#123;&#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// console.log(t)</span></span><br><span class="line">        <span class="keyword">return</span> e[t].<span class="title function_">call</span>(n.<span class="property">exports</span>, n, n.<span class="property">exports</span>, c),</span><br><span class="line">            n.<span class="property">l</span> = !<span class="number">0</span>,</span><br><span class="line">            n.<span class="property">exports</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">hliang</span> = c</span><br><span class="line">&#125;</span><br><span class="line">)([</span><br><span class="line">    <span class="keyword">function</span>(<span class="params">e,t,n</span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;111&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">])</span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">hliang</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/17/Hello%20World/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.jpg">
-      <meta itemprop="name" content="hliang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑脸怪">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 黑脸怪">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/17/Hello%20World/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-17 01:52:17" itemprop="dateCreated datePublished" datetime="2022-03-17T01:52:17+08:00">2022-03-17</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
